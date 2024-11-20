@@ -1,0 +1,18 @@
+/// @ 0.12.4
+### {
+  name: "フグパンチボタン"
+  version: "0.0.1"
+  author: "Misskey Project"
+}
+
+Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
+  let fugu = "ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )"
+
+  if (note.text.trim() == '') {
+    // ノートの中身がない場合はフグパンチに置き換え
+    rewrite('text', fugu)
+  } else {
+    // ノートの中身がある場合は冒頭にフグパンチを追加して改行
+    rewrite('text', `{fugu}{Str:lf}{note.text}`)
+  }
+})
