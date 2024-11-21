@@ -25,7 +25,7 @@ pl_th_list_tmpl = """
         {% if themes != [] %}
             {% for theme in themes %}
                 <div class="theme-container">
-                    <a href="{{ theme["link"] }}">{{ theme["name"] }}</a>
+                    <a href="{{ theme["link"] }}" target="_blank" rel="noopener noreferrer">{{ theme["name"] }}</a>
                 </div>
             {% endfor %}
         {% endif %}
@@ -34,7 +34,7 @@ pl_th_list_tmpl = """
         {% if plugins != [] %}
             {% for plugin in plugins %}
                 <div class="plugin-container">
-                    <a href="{{ plugin["link"] }}">{{ plugin["name"] }}</a>
+                    <a href="{{ plugin["link"] }}" target="_blank" rel="noopener noreferrer">{{ plugin["name"] }}</a>
                 </div>
             {% endfor %}
         {% endif %}
